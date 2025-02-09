@@ -5,7 +5,7 @@ export class LoginUserDTO {
     @ApiProperty({
         description: 'Username for login',
         type: String,
-        example: 'YOGIA.AMMAH',
+        example: 'SABAN',
     })
     @IsString()
     @IsNotEmpty()
@@ -16,7 +16,7 @@ export class LoginUserDTO {
     @ApiProperty({
         description: 'Password for login',
         type: String,
-        example: 'password',
+        example: 'SABAN123',
     })
     @IsString()
     @IsNotEmpty()

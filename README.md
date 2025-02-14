@@ -66,6 +66,69 @@ Dalam proyek ini, NestJS digunakan untuk membangun aplikasi backend dengan tiga 
 ```
 
 ## 3. DIAGRAM
+Berikut diagram arsitektur proyek dalam bentuk flowchart visual:
+```mermaid
+flowchart
+    A[Main.ts] -->|Memuat| B[AppModule]
+    B -->|Memuat| C[AuthModule]
+    B -->|Memuat| D[ChatModule]
+    B -->|Memuat| E[ProfileModule]
+    B -->|Memuat| F[PrismaModule]
+    
+    C -->|Mengelola| G[AuthService]
+    C -->|Mengatur Route| H[AuthController]
+    
+    D -->|Mengelola| I[ChatService]
+    D -->|Mengatur Route| J[ChatController]
+    
+    E -->|Mengelola| K[ProfileService]
+    E -->|Mengatur Route| L[ProfileController]
+    
+    F -->|Mengelola Database| M[Database Operations]
+```
+
+Diagram ini menunjukkan bagaimana modul saling terhubung dan bagaimana aliran data terjadi di dalam aplikasi **Lab-NestJS**.
+
+---
+
+## 7. ALUR KERJA REGISTER USER, LOGIN DAN AUTHENTICATION
+```mermaid
+graph TD
+  %% Registrasi Pengguna
+  A[Mulai: Register] -->|Pengguna mengisi data| B[Simpan data pengguna]
+  B -->|Sukses| C[Tampilkan pesan sukses]
+  B -.->|Gagal: Username sudah digunakan| I[Tampilkan error: Akun sudah ada]
+
+  %% Login dan Autentikasi
+  D[Mulai: Login] -->|Pengguna memasukkan kredensial| E[Periksa username]
+  E -->|Valid| F[Periksa password]
+  E -.->|Gagal: Username tidak ditemukan| L[Tampilkan error: Akun tidak terdaftar]
+  F -->|Valid| G[Generate token]
+  F -.->|Gagal: Password salah| M[Tampilkan error: Password salah]
+  G -->|Sukses| H[Return token]
+  H -->|Sukses| J[Pengguna menyimpan token & mengakses API]
+
+  %% Autentikasi Token
+  J -->|Mengakses API dengan token| K[Verifikasi token]
+  K -->|Valid| N[Akses API diberikan]
+  K -.->|Gagal: Token tidak valid| O[Tampilkan error: Token tidak sah]
+```
+---
+## 8. ALUR SKEMA ALUR CHAT ROOM DENGAN WEBSOCKET
+```mermaid
+graph TD
+    A[User Client] -->|Bergabung ke Room| B[Server WebSocket NestJS]
+    B -->|Broadcast User Bergabung| C[ Room Chat]
+    C -->|Memberi Notifikasi ke Semua User| A
+
+     A -->|Mengirim Pesan| B
+    B -->|Broadcast Pesan ke Room| C
+    C -->|Mengirim Pesan ke Semua User| A
+
+    A -->|Keluar dari Room| B
+    B -->|Broadcast User Keluar| C
+    C -->|Memberi Notifikasi ke Semua User| A
+```
 
 
 

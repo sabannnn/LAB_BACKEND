@@ -791,10 +791,31 @@ File ini digunakan untuk memberikan dokumentasi tentang proyek kepada pengembang
 
 
 ## 6. JALANKAN PROYEK
+1. **Clone repository:**
+   ```sh
+   git clone <repo-url>
+   cd lab-nestjs
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Menjalankan server:**
+   ```sh
+   npm start
+   npm run start:dev
+   ```
+
+4. **Akses API di:**
+   ```sh
+   http://localhost:3000
+   http://localhost:3000/api-docs  --> Swagger
+   ```
 
 
 
 
 ## 7. KESIMPULAN
-
-
+Proyek ini adalah implementasi backend menggunakan NestJS dengan beberapa modul utama, termasuk autentikasi, chat, profil mahasiswa, dan database dengan Prisma. Dengan menggunakan teknologi seperti WebSockets dan JWT, proyek ini dapat menyediakan komunikasi real-time dan autentikasi pengguna yang aman.

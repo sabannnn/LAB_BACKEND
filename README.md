@@ -91,7 +91,7 @@ Diagram ini menunjukkan bagaimana modul saling terhubung dan bagaimana aliran da
 
 ---
 
-## 7. ALUR KERJA REGISTER USER, LOGIN DAN AUTHENTICATION
+## 4. ALUR KERJA REGISTER USER, LOGIN DAN AUTHENTICATION
 ```mermaid
 graph TD
   %% Registrasi Pengguna
@@ -114,7 +114,7 @@ graph TD
   K -.->|Gagal: Token tidak valid| O[Tampilkan error: Token tidak sah]
 ```
 ---
-## 8. ALUR SKEMA ALUR CHAT ROOM DENGAN WEBSOCKET
+## 5. ALUR SKEMA ALUR CHAT ROOM DENGAN WEBSOCKET
 ```mermaid
 graph TD
     A[User Client] -->|Bergabung ke Room| B[Server WebSocket NestJS]
@@ -132,7 +132,7 @@ graph TD
 
 
 
-## 3.TEKNOLOGI YANG DIGUNAKAN
+## 6.TEKNOLOGI YANG DIGUNAKAN
 - **NestJS**
 -Framework utama untuk pengembangan backend
 -Menggunakan TypeScript sebagai bahasa pemrograman
@@ -157,7 +157,7 @@ o	Memberikan developer experience yang lebih baik
 - **HTML, CSS, JavaScript**
    Bahasa-bahasa yang digunakan untuk membangun tampilan antarmuka pengguna (front-end), terutama file-file statis yang disimpan dalam folder public. HTML digunakan untuk struktur konten, CSS untuk styling, dan JavaScript untuk interaksi dinamis di sisi klien.
 
-## 4. INSTALASI PROYEK NEST
+## 7. INSTALASI PROYEK NEST
 ### 1. Insialisasi NestJS CLI
    ``
     npm i -g @nestjs/cli
@@ -817,5 +817,5 @@ File ini digunakan untuk memberikan dokumentasi tentang proyek kepada pengembang
 
 
 
-## 7. KESIMPULAN
+## 8. KESIMPULAN
 Proyek ini adalah implementasi backend menggunakan NestJS dengan beberapa modul utama, termasuk autentikasi, chat, profil mahasiswa, dan database dengan Prisma. Dengan menggunakan teknologi seperti WebSockets dan JWT, proyek ini dapat menyediakan komunikasi real-time dan autentikasi pengguna yang aman.

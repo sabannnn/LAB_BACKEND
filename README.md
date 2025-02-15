@@ -185,7 +185,7 @@ nest new nama_proyek
 code .
 
 
-## 5.PENJELASAN SETIAP FILE
+## 8.PENJELASAN SETIAP FILE
 ### 1. `prisma/schema.prisma`
 File ini berisi definisi model dan enum yang digunakan dalam aplikasi. Berikut adalah penjelasan setiap bagian:
 
@@ -790,7 +790,7 @@ File ini digunakan untuk memberikan dokumentasi tentang proyek kepada pengembang
 
 
 
-## 6. JALANKAN PROYEK
+## 9. JALANKAN PROYEK
 1. **Clone repository:**
    ```sh
    git clone <repo-url>
@@ -817,5 +817,5 @@ File ini digunakan untuk memberikan dokumentasi tentang proyek kepada pengembang
 
 
 
-## 8. KESIMPULAN
+## 10. KESIMPULAN
 Proyek ini adalah implementasi backend menggunakan NestJS dengan beberapa modul utama, termasuk autentikasi, chat, profil mahasiswa, dan database dengan Prisma. Dengan menggunakan teknologi seperti WebSockets dan JWT, proyek ini dapat menyediakan komunikasi real-time dan autentikasi pengguna yang aman.

@@ -11,14 +11,10 @@ Dalam proyek ini, NestJS digunakan untuk membangun aplikasi backend dengan tiga 
 
 ## 2.STRUKTUR FOLDER
 ```
-📦lab-backend/
+📦backend/
 ├── 📂node_modules/
 ├── 📂prisma/
 │   ├── prisma.schema
-├── 📂public/
-│   ├── 🟨script.js
-│   ├── 🟧index.html
-│   ├── 🟦style.css
 ├── 📂src/
 │   ├── 📂chat/
 │   |   |-- chat.gateaway.spec.ts
